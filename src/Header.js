@@ -8,9 +8,12 @@ function Header() {
 
             <div className="Header">
                 <h1>Поиск книг</h1>
-                <form action="">
-                    <input type="text"/>
-                    <button type="submit">Поиск</button>
+                <form>
+                    <label>
+                        Имя:
+                        <input type="text" name="name" />
+                    </label>
+                    <input type="submit" value="Поиск" />
                 </form>
             </div>
 
