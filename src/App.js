@@ -6,32 +6,32 @@ import React, {useState} from "react";
 const API_KEY="AIzaSyCqIpXAlGyJOcDvCm5y-g58Q35hrA7VP1I";
 
 function App() {
-    const [booksList, setBooks] = useState({});
+  const [booksList, setBooks] = useState({});
 
-    async function fetchBooks(e) {
-        const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${e}&maxResults=30&key=AIzaSyCqIpXAlGyJOcDvCm5y-g58Q35hrA7VP1I`)
-            .then(function(res) {
-                return res.json();
-            })
-            .then(function(result) {
-                console.log(result);
-                setBooks(result);
-            })
-            .catch((err) => console.log(err))
-    }
+  async function fetchBooks(e) {
+    const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${e}&maxResults=30&key=AIzaSyCqIpXAlGyJOcDvCm5y-g58Q35hrA7VP1I`)
+        .then(function(res) {
+          return res.json();
+        })
+        .then(function(result) {
+          console.log(result);
+          setBooks(result);
+        })
+        .catch((err) => console.log(err))
+  }
 
 
-    return (
+  return (
 
-        <
-        div className = "App" >
+      <
+          div className = "App" >
         <Header/>
         <Books/>
-        </div>
+      </div>
 
 
 
-    );
+  );
 }
 
 export default App;
