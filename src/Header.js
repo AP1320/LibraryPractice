@@ -1,26 +1,37 @@
-import './App.css';
+import React, { useEffect, useState } from "react";
 
-function Header() {
-
+function Header(props) {
+    const [inputValue, setInputValue] = useState('');
 
     return (
-
-
-        <div className="Header">
-            <h1>Поиск книг</h1>
-            <form>
-                <label>
-                    Имя:
-                    <input type="text" name="name" />
-                </label>
-                <input type="submit" value="Поиск" />
-            </form>
-        </div>
-
-
-
-
-
+        <header>
+            <div className="inputSearchField">
+                <label className="textInputBook" for="site-search">Search for books</label>
+                <input onKeyDown={(e) => {
+                    if (e.key === "Enter") props.fetchBooks(inputValue)
+                }} onChange={(e) => setInputValue(e.target.value)} type="search" id="books-search" name="q" />
+            </div>
+            <div className="selectorSort">
+                <label className="textInputCategories" for="site-search">Categories</label>
+                <select className="selectCategories">
+                    <option selected value="All">All</option>
+                    <option value="art">art</option>
+                    <option value="biography">biography</option>
+                    <option value="computers">computers</option>
+                    <option value="history">history</option>
+                    <option value="medical">medical</option>
+                    <option value="poetry">poetry</option>
+                </select>
+                <label className="textInputCategories" for="site-search">Sorting by</label>
+                <select className="selectCategories">
+                    <option selected value="relevance">relevance</option>
+                    <option value="newest">newest</option>
+                </select>
+            </div>
+            <div className="totalItem">
+                <p>Find {props.booksList.totalItems} results</p>
+            </div>
+        </header>
     );
 }
 
