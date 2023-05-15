@@ -1,33 +1,30 @@
 import './App.css';
 import Header from "./Header";
-import React, {setBooks, useState,useBooks} from "react";
+//import Books from "./Books";
+import React, {useEffect,useState} from "react";
 
-function Books() {
+//const API_KEY="AIzaSyCqIpXAlGyJOcDvCm5y-g58Q35hrA7VP1I";
 
-
-
-
-
-
-    //const [useBooks,SetBooks] = useState({});
+function Books(props) {
 
 
 
 
+
+    const res = props.books.items?.map(el => {
+        return (
+            <div className="Books" key={el.id}>
+                <p>{el.volumeInfo.title}</p>
+                <img src={el.volumeInfo.imageLinks?.smallThumbnail} alt={el.id} />
+            </div>
+        )
+    })
 
     return (
-
-
-        <div className="Books">
-
-
+        <div className="result">
+            {res}
         </div>
-
-
-
-
-
-    );
+    )
 }
 
 export default Books;

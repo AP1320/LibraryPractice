@@ -1,28 +1,39 @@
 .App {
   text-align: center;
-  color:#00FFFF;
-
-
-
-  background: #282c34;
+  color: deepskyblue;
 
 
 }
 
 .Header {
   text-align: center;
-  color:chartreuse;
-  background-image:url("https://www.mgpu.ru/wp-content/uploads/2018/01/books2.jpg");
+  color: gainsboro;
+  background-image: url("https://www.mgpu.ru/wp-content/uploads/2018/01/books2.jpg");
+
 
 }
+
+
+
+.textSearch {
+  margin: 0;
+}
+
+
+.Books {
+  text-align: center;
+  color: deepskyblue;
+  background-color: azure;
+
+
+}
+
 
 
 body{
-  background: #282c34;
-
-
+  color: deepskyblue;
+  background-color: #282c34;
 }
-
 
 .App-logo {
   height: 40vmin;
