@@ -9,6 +9,12 @@ function Header(props) {
 
     const [inputValue, setInputValue] = useState('');
 
+    const Search=()=>{
+        props.Library(inputValue)
+
+    }
+
+
 
 
 
@@ -20,9 +26,11 @@ function Header(props) {
             <div className="inputSearchField">
                 <h1 className="textSearch">Search for books</h1>
                 <label className="textInputBook" htmlFor="site-search"></label>
+
                 <input onKeyDown={(e) => {
                     if (e.key === "Enter") props.Library(inputValue)
                 }} onChange={(e) => setInputValue(e.target.value)} type="search" id="books-search" name="q"/>
+                <button onClick={Search}>Search</button>
             </div>
             <div className="selectorSort">
                 <label className="textInputCategories" htmlFor="site-search">Categories</label>
