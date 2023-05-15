@@ -28,22 +28,20 @@ function Header(props) {
                 <label className="textInputCategories" htmlFor="site-search">Categories</label>
                 <select className="selectCategories">
                     <option selected value="All">All</option>
-                    <option value="art">art</option>
-                    <option value="biography">biography</option>
-                    <option value="computers">computers</option>
-                    <option value="history">history</option>
-                    <option value="medical">medical</option>
-                    <option value="poetry">poetry</option>
+                    <option value="art">Art</option>
+                    <option value="biography">Biography</option>
+                    <option value="computers">Computers</option>
+                    <option value="history">History</option>
+                    <option value="medical">Medical</option>
+                    <option value="poetry">Poetry</option>
                 </select>
                 <label className="textInputCategories" htmlFor="site-search">Sorting by</label>
                 <select className="selectCategories">
-                    <option selected value="relevance">relevance</option>
-                    <option value="newest">newest</option>
+                    <option selected value="relevance">Relevance</option>
+                    <option value="newest">Newest</option>
                 </select>
             </div>
-            <div className="totalItem">
-                <p>Find {props.Library.totalItems} results</p>
-            </div>
+
         </div>
 
 
