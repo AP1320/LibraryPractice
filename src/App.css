@@ -1,8 +1,13 @@
 .App {
   text-align: center;
-  color: deepskyblue;
+  color: white;
 
 
+}
+
+.About{
+  text-align: center;
+  color: white;
 }
 
 .Header {
@@ -22,29 +27,64 @@
 
 .Books {
   text-align: center;
-  color: deepskyblue;
+  color: white;
   background-color: #282c34;
+}
 
 
+.BooksDetails{
+  text-align: center;
+  color: white;
+  background-color: #282c34;
 }
 
 .result
 {
   display: grid;
-  font-style: normal;
+  font-style: italic;
   align-items: center;
   margin-top: 30px;
   grid-template-columns: repeat(10,minmax(100px,0.5fr));
   grid-gap:20px;
+  margin-right: 10px; /* Отступ справа */
+  margin-left: 10px;
+  min-height: 100px;
+  min-width: 992px;
+  max-width: 150px;
+}
+
+.result1
+{
+  display: grid;
+  font-style: italic;
+  align-items: center;
+  margin-top: 30px;
+  grid-template-columns: repeat(10,0.5fr);
+  grid-gap:20px;
+  margin-right: 10px; /* Отступ справа */
+  margin-left: 10px;
+  min-height: 100px;
+}
+
+
+.result2
+{
+  display: grid;
+  font-style: italic;
+  align-items: center;
+  margin-top: 30px;
+  grid-template-columns: repeat(10,0.5fr);
+  grid-gap:20px;
+  margin-right: 10px; /* Отступ справа */
+  margin-left: 10px;
+  min-height: 100px;
 }
 
 
 
 
-
-
 body{
-  color: deepskyblue;
+  color: white;
   background-color: #282c34;
 }
 

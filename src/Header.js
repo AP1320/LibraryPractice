@@ -2,12 +2,17 @@ import './App.css';
 //import Header from "./Header";
 import Books from "./Books";
 import React, {useEffect,useState} from "react";
+import App from "./App";
+import {useNavigate} from "react-router-dom";
 
 //const API_KEY="AIzaSyCqIpXAlGyJOcDvCm5y-g58Q35hrA7VP1I";
 
 function Header(props) {
-
+    const navigate=useNavigate();
     const [inputValue, setInputValue] = useState('');
+
+
+
 
     const Search=()=>{
         props.Library(inputValue)
@@ -35,7 +40,7 @@ function Header(props) {
             <div className="selectorSort">
                 <label className="textInputCategories" htmlFor="site-search">Categories</label>
                 <select className="selectCategories">
-                    <option selected value="All">All</option>
+                    <option defaultValue="All">All</option>
                     <option value="art">Art</option>
                     <option value="biography">Biography</option>
                     <option value="computers">Computers</option>
@@ -45,7 +50,7 @@ function Header(props) {
                 </select>
                 <label className="textInputCategories" htmlFor="site-search">Sorting by</label>
                 <select className="selectCategories">
-                    <option selected value="relevance">Relevance</option>
+                    <option defaultValue="relevance">Relevance</option>
                     <option value="newest">Newest</option>
                 </select>
             </div>
